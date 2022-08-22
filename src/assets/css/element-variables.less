@@ -1,0 +1,103 @@
+@import '~@/assets/css/publicColor.less';
+.el-button--primary {
+  background-color: @main !important;
+  border-color: @main !important;
+}
+.el-button:focus,
+.el-button:hover {
+  color: @main !important;
+  border-color: @bc_hover !important;
+  background-color: @mainHover !important;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: @main !important;
+  border-color: @main !important;
+}
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: @main !important;
+}
+.el-button + .el-button {
+  margin-left: 0;
+}
+button.el-button.el-button--default.el-button--medium {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.basis_checkbox.basic_btn.save-btn {
+  .el-button + .el-button {
+    margin-left: 10px;
+  }
+}
+button.el-button.confirm.el-button--cancel.is-disabled {
+  background-color: #ddd !important;
+  color: @white !important;
+  &:hover {
+    background-color: #ddd !important;
+    color: @white !important;
+  }
+}
+.el-dialog__header {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f8f8;
+}
+
+.el-dialog__headerbtn {
+  top: 10px;
+  right: 12px;
+}
+.el-dialog__title {
+  color: #333;
+}
+.el-dialog__headerbtn .el-dialog__close {
+  /* color: white; */
+  font-size: 23px;
+}
+.public-dialog .el-button {
+  padding: 8px 15px;
+}
+.el-dialog__body {
+  text-align: left;
+  padding: 10px 20px 15px;
+}
+
+.dialog-footer {
+  text-align: right;
+  padding-top: 20px;
+  .el-button {
+    font-size: 14px;
+    border: none;
+  }
+}
+.dialog-footer > div {
+  display: inline-block;
+}
+.dialog-footer > div:nth-of-type(1) {
+  margin-right: 15px;
+}
+
+.el-button.cancel {
+  margin-right: 15px;
+  background-color: #f1f1f1;
+  color: @font-666;
+}
+.el-button.confirm {
+  background-color: @main;
+  color: @white;
+}
+.dialog-footer {
+  .el-button {
+    height: 30px;
+    line-height: 29px;
+    padding: 0 15px;
+  }
+}
+.el-input--medium .el-input__inner {
+  height: 28px !important;
+  line-height: 28px !important;
+  text-align: center;
+}
+.el-select {
+  display: block;
+}

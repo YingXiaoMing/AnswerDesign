@@ -1,0 +1,32 @@
+@import './publicColor.less';
+  // 公共样式
+  .el-select {
+    .el-input{
+      &.is-focus{
+        .el-input__inner{
+            color: @main;
+            border-color:@main;
+        }
+      }
+    }
+    .el-input__inner{
+      &:focus{
+        border-color:@main;
+      }
+    }
+  }
+
+  .el-input__inner{
+      &:focus{
+        border-color: @main
+      }
+    }
+  .el-select-dropdown__item.selected{
+    color: @main
+  }
+
+  .el-checkbox__inner{
+    &:hover{
+      border-color: @main
+    }
+  }
