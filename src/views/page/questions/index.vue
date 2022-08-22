@@ -9,7 +9,10 @@
         @edit_question="edit_question"
         @delete_question="delete_question"
         :question="question"/>
-        <fill-blank-question v-if="question&&question.type==2" :question="question"/>
+        <fill-blank-question v-if="question&&question.type==2"
+        @edit_question="edit_question"
+        @delete_question="delete_question"
+        :question="question"/>
       </div>
     </div>
     <student-info-editor-modal ref="studentInfoEditorModal"

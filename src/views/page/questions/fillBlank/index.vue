@@ -6,6 +6,16 @@
             <span class="question-score">({{question.totalScore}})分</span>
         </div>
         <div class="question-content">
+            <div class="question-editor">
+                <span class="btn_addSub_name">每组题数</span>
+                <span class="btn_addSub">-</span>
+                <span class="btn_addSub_info">{{question.groupSize}}</span>
+                <span class="btn_addSub">+</span>
+                <span class="layui-btn layui-btn-xs"
+                    @click="edit_question">编辑</span>
+                <span class="layui-btn layui-btn-xs"
+                    @click="delete_question">删除</span>
+            </div>
             <div class="question-tiankong">Glorira邓紫棋</div>
         </div>
     </div>
@@ -13,11 +23,19 @@
 <script>
 export default {
     props: {
-    question: {
-      type: Object,
-      default: () => { }
+        question: {
+        type: Object,
+        default: () => { }
+        }
+    },
+    methods: {
+        edit_question () {
+            this.$emit('edit_question', this.question)
+        },
+        delete_question () {
+            this.$emit('delete_question', this.question)
+        }
     }
-  },
 }
 </script>
 
