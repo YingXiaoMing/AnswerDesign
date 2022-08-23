@@ -62,7 +62,9 @@ export default {
       }
 
       const productData = []
+      // 计算它有多少个题目
       const num = Math.ceil(arr.length / groupSize)
+
       for (let i = 0; i < num; i++) {
         productData.push(arr.slice(i * groupSize, i * groupSize + groupSize))
       }
