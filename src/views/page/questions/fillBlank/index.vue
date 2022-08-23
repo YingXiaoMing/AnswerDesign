@@ -16,16 +16,37 @@
                 <span class="layui-btn layui-btn-xs"
                     @click="delete_question">删除</span>
             </div>
-            <div class="question-tiankong">Glorira邓紫棋</div>
+            <div class="question-tiankong">Glorira</div>
         </div>
     </div>
 </template>
 <script>
+import { QUESTION_NUMBERS } from '@/models/question'
 export default {
     props: {
         question: {
         type: Object,
         default: () => { }
+        }
+    },
+    computed: {
+        serialNumber () {
+            return QUESTION_NUMBERS[this.question.serialNumber] || '一'
+        },
+        questionGroup() {
+            const arr = []
+            const { subquestions, groupSize } = this.question
+            for (const i in subquestions) {
+                arr.push(...subquestions[i].subquestions)
+            }
+
+            const productData = []
+            const num = Math.ceil(arr.length / groupSize)
+            for (let i = 0; i < num; i++) {
+                productData.push(arr.slice(i * groupSize, i * groupSize + groupSize))
+            }
+            console.log(productData)
+            return productData
         }
     },
     methods: {
